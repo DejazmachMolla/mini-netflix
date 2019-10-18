@@ -1,4 +1,4 @@
-<ul *ngIf="!loading" class="movies">
+<ul *ngIf="storedFavs && storedFavs.length>0" class="movies">
         <li *ngFor="let movieId of storedFavs; let i = index">
           <app-single-favorite-movie [movieId]="movieId">
           </app-single-favorite-movie>

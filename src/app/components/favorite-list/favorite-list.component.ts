@@ -10,7 +10,7 @@ export class FavoriteListComponent implements OnInit {
   fetchError : boolean = false;
   length : number;
   storedFavs;
-  constructor(private movieService : MovieService) { }
+  constructor() { }
 
   ngOnInit() {
     let favContainer = sessionStorage.getItem('favContainer');
