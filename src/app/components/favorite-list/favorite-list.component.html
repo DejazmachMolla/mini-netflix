@@ -1,0 +1,7 @@
+<ul *ngIf="!loading" class="movies">
+        <li *ngFor="let movieId of storedFavs; let i = index">
+          <app-single-favorite-movie [movieId]="movieId">
+          </app-single-favorite-movie>
+        </li>
+      </ul>
+      <h1 *ngIf="!storedFavs || storedFavs.length==0">Your favorites list is empty</h1>

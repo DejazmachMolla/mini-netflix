@@ -1,0 +1,45 @@
+:host {
+    display: block;
+    margin-top: 80px;
+    padding: 1em 2em;
+    background-image: linear-gradient(rgb(8,7,7), rgb(11,10,9));
+    min-height: 100vh;
+    color: white;
+}
+
+.wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "textInfo imageInfo";
+    
+}
+.textInfo {
+    padding-right: 2em;
+    grid-area: textInfo;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "title"
+                         "overview"
+}
+.title {
+    grid-area: title;
+    margin-top: 30%;
+}
+.overview {
+    grid-area: overview;
+    margin-top: -20%;
+    
+}
+.imageInfo {
+    grid-area: imageInfo;
+}
+.overview>p:first-child {
+    font-size: 1.2em;
+    border-left: 3px solid white;
+    padding-left: 10px;
+}
+.overview>p {
+    font-size: 24px;
+}

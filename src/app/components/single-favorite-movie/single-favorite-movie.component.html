@@ -1,0 +1,10 @@
+<mat-card class="card">
+    <img *ngIf="movie" mat-card-image [src]="getPoster()"/>
+    <mat-card-header>
+        <mat-card-title>{{movie?.original_title}}</mat-card-title>
+        <mat-card-subtitle>{{movie?.release_date | date }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions>
+            <a [routerLink]="['/movies/', movie.id]"><button mat-button>VIEW</button></a>
+    </mat-card-actions>
+</mat-card>

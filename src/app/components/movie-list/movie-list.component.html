@@ -1,0 +1,36 @@
+<div class="wrap">
+  
+<form #f="ngForm" (ngSubmit)="getAllMovies()" class="searchForm">
+    <div class="searchField">
+          <i class="material-icons">search</i>
+          <input matInput placeholder="Search Movies" name="searchText" id="searchText" type="text"  [(ngModel)]=searchTextVal>
+      </div>
+    <button mat-raised-button type="submit" class="searchButton">
+        <i class="material-icons custom-color">search</i>Search
+      </button>
+    
+  </form>
+  <h3 *ngIf="!loading && !fetchError && data" class="foundItems">{{data?.total_results}} results found</h3>
+  <div *ngIf="!loading && fetchError" class="error">
+    <h1 *ngIf="!loading">Sorry please try searching again. Error encountered.</h1>
+  </div>
+  <mat-spinner *ngIf="loading" class="progressContainer"
+      [color]="color"
+      [mode]="mode"
+      [value]="value">
+    </mat-spinner>
+  <ul *ngIf="!loading" class="movies">
+    <li *ngFor="let movie of data?.results; let i = index">
+      <app-single-movie [movie]="movie">
+      </app-single-movie>
+    </li>
+  </ul>
+
+    <mat-paginator *ngIf="data" [length]="length"
+              [pageIndex]="start"
+              [pageSize]="pageSize"
+              [pageSizeOptions]="pageSizeOptions"
+              (page)="onPage($event)" class="paginator">
+</mat-paginator>
+
+</div>

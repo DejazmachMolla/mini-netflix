@@ -1,0 +1,43 @@
+:host {
+    display: block;
+    margin-top: 80px;
+    padding: 1em 2em;
+    background-image: linear-gradient(rgb(8,7,7), rgb(11,10,9));
+    min-height: 100vh;
+}
+.movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
+    row-gap: 2em;
+    column-gap: 1em;
+} 
+.movies>li {
+    max-width: 350px;
+}
+@media(min-width : 500px) {
+    .movies {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+        
+    }
+}
+@media(min-width : 800px) {
+    .movies {
+        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    }
+}
+@media(min-width : 1100px) {
+    .movies {
+        grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
+    }
+}
+
+h1 {
+    background: darkorange;
+    font-size: 200%;
+    padding: 1em;
+    margin: auto;
+    text-align: center;
+    width: 60%;
+    border-radius: 5px;
+}

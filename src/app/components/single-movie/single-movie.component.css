@@ -1,0 +1,42 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'icon'
+                         'card'
+} 
+
+.icon {
+    grid-area: icon;
+}
+.card {
+    grid-area: card;
+}
+
+.icon {
+    position: absolute;
+    bottom: -1.5em; 
+    left: .5em;
+    z-index: 2;
+    font-size: 3em;
+    color: white;
+    display: none;
+    color: red;
+}
+
+.card:hover + .icon {
+    display: inline-block; 
+    z-index: 3;
+}
+
+.icon:hover {
+    display: block;
+    cursor: pointer;
+}
+.container {
+    position: relative;
+}
+.container:hover .card {
+    position: contents;
+}
