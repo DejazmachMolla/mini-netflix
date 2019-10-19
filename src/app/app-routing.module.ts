@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: '/movies', pathMatch: 'full'
+  },
+  {
+    path: '**',
+    redirectTo: '/movies'
   }
 ];
 
