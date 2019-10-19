@@ -28,9 +28,7 @@
     margin-top: 30%;
 }
 .overview {
-    grid-area: overview;
-    margin-top: -20%;
-    
+    grid-area: overview;    
 }
 .imageInfo {
     grid-area: imageInfo;
@@ -42,4 +40,7 @@
 }
 .overview>p {
     font-size: 24px;
+}
+i {
+    color: orange;
 }
