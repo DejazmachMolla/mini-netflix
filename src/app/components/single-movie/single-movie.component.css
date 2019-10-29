@@ -40,3 +40,10 @@
 .container:hover .card {
     position: contents;
 }
+i {
+    display: inline-block;
+    transition: transform .3s;
+}
+i:hover {
+    transform: scale(1.5);
+}
